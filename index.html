@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Contreras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+   
+    <form id="login-form" class="form-box animate__animated animate__fadeInUp">
+        <img class="image" src="./assets/css/images/login.png">
+        <h1 class="form-title">Sign in</h1>
+        <input id="username-field" name="username" type="text" placeholder="Username or email">
+        <input id="password-field" name="password" type="password" placeholder="Password">
+        <button class="submit" id="login-form-submit">Login</button>
+    </form> 
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const user = loginForm.username.value;
+            const pass = loginForm.password.value;
+
+            if(user === "santiago" && pass === "sabana" )
+            {
+				window.location="loader.html";
+            }
+            else
+            {
+                alert("Username or password incorrect")
+            }
+
+        });
+    </script>   
+</body>
+</html>
